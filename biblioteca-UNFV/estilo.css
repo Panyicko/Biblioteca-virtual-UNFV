@@ -1,0 +1,36 @@
+body{
+    font-family:arial, sans-serif;
+
+}
+.menu{
+   
+    padding:20px ;
+    background:#2c1713;
+    overflow:hidden;
+     width: 100%;
+   
+
+
+}
+
+.menu li a{
+    text-decoration:none;
+    Color:#fff;
+ text-align:center;
+    padding: 8px 8px  ;
+
+  
+
+}
+.menu li {
+    display:inline;
+    
+  font-size: 14px;
+
+}
+
+.menu li a:hover{
+    background:#866767;
+     padding:20px ;
+  
+}

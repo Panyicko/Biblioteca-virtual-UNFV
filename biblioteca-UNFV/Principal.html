@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>BIBLIOTECA UNFV</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, sans-serif;
+                color: white;
+                 text-align: center;
+                position: relative;
+                background-image: url("biblioteca.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.45);
+            }
+            .container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 50px;
+            }
+            .intro-box {
+                max-width: 540px;
+                width: 100%;
+                background: transparent;
+                border: none;
+                padding: 30px;
+            }
+          
+            p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            }
+            @media (max-width: 800px) {
+                .container {
+                   
+                    padding: 20px;
+                }
+                .intro-box {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="intro-box">
+                <h1>BIBLIOTECA UNFV</h1>
+            
+            </div>
+        </div>
+    </body>
+</html>

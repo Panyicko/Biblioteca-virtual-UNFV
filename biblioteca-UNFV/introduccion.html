@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>BIBLIOTECA UNFV</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, sans-serif;
+                color: white;
+                position: relative;
+                background-image: url("introduccionunfv.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.45);
+            }
+            .container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 100vh;
+                padding: 50px;
+            }
+            .intro-box {
+                max-width: 540px;
+                background: transparent;
+                border: none;
+                padding: 30px;
+            }
+            h1 {
+                margin-top: 0;
+                font-size:30px;
+                text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+            }
+            p {
+                font-size:12px ;
+                line-height: 1.6;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            }
+            @media (max-width: 800px) {
+                .container {
+                    justify-content: center;
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="intro-box">
+                <h1>Introducción</h1>
+                <p>El uso de libros en la universidad ha experimentado una transición significativa desde el formato impreso tradicional hacia recursos digitales y plataformas en línea, adaptándose a la era de la información instantánea.  Aunque los apuntes de clase se han convertido en el material principal de estudio, los libros siguen siendo fundamentales para profundizar en teorías, consultar fuentes especializadas y completar la formación académica.</p>
+            </div>
+        </div>
+    </body>
+</html>
+  
