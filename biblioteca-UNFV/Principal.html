@@ -40,6 +40,22 @@
                 border: none;
                 padding: 30px;
             }
+            .icon-link {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: inline-block;
+                z-index: 2;
+            }
+            .icon-link img {
+                width: 120px;
+                max-width: 100%;
+                height: auto;
+                transition: transform 0.2s ease;
+            }
+            .icon-link img:hover {
+                transform: scale(1.05);
+            }
           
             p {
                 font-size: 1.2rem;
@@ -58,10 +74,12 @@
         </style>
     </head>
     <body>
+        <a class="icon-link" href="primeracapa.html">
+            <img src="icono.png" alt="Iniciar sesión e ir a primera capa">
+        </a>
         <div class="container">
             <div class="intro-box">
                 <h1>BIBLIOTECA UNFV</h1>
-            
             </div>
         </div>
     </body>

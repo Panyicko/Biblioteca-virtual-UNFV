@@ -31,7 +31,7 @@ main{
 
 .caja__trasera{
     width:100%;
-    padding:10px 20px;
+    padding: 10px 20px;
     display:flex;
     justify-content:center;
     backdrop-filter: blur(10px);
@@ -39,7 +39,7 @@ main{
 
 }
 .caja__trasera div{
- margin:100px 40px;
+ margin: 100px 40px;
  color:aliceblue;
  transition:all 500ms;
 
@@ -51,7 +51,7 @@ main{
 }
 .caja__trasera div h3{
     font-weight:400;
-    font-size:24px;
+    font-size:26px;
 }
 
 .caja__trasera button{
