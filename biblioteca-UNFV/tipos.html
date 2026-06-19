@@ -1,16 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
+        <title>BIBLIOTECA UNFV</title>
         <link rel="stylesheet" href="estilo.css">
-
     </head>
     <body>
-        <ul class="menu">
-            <li><a href="#">Libros de electronica</a></li>
-            <li><a href="#">Libros de fisica</a></li>
-            <li><a href="#">Libros de estadistica</a></li>
-             <li><a href="#">Material para repaso</a></li>
-    </body>
+        <div class="page-row">
+            <section class="intro-panel">
+                <div class="intro-box">
+                    <h1>Introducción</h1>
+                    <p>El uso de libros en la universidad ha experimentado una transición significativa desde el formato impreso tradicional hacia recursos digitales y plataformas en línea, adaptándose a la era de la información instantánea. Aunque los apuntes de clase se han convertido en el material principal de estudio, los libros siguen siendo fundamentales para profundizar en teorías, consultar fuentes especializadas y completar la formación académica.</p>
+                </div>
+            </section>
+            <main class="tipos-panel">
+                <ul class="menu">
+                    <li><a href="#" class="menu-item active" data-section="fisica">Libros de física</a></li>
+                    <li><a href="#" class="menu-item" data-section="electronica">Libros de electrónica</a></li>
+                    <li><a href="#" class="menu-item" data-section="estadistica">Libros de estadística</a></li>
+                    <li><a href="#" class="menu-item" data-section="repaso">Material para repaso</a></li>
+                </ul>
+
+                <section class="contenido-seccion contenido-fisica active" id="fisica" aria-hidden="false">
+                    <div class="fisica-item">
+                        <h2>FÍSICA ELEMENTAL Y APLICADA</h2>
+                        <img src="libro1.png" width="10px" class="libro1" alt="Libro 1">
+                        <a href="https://share.google/Y7291fTzW9qepvyI7#" class="btn-1">Leer libro</a>
+                    </div>
+                    <div class="fisica-item">
+                        <h2>FÍSICA GENERAL - IGNACIO MARTIN BRAGADO</h2>
+                        <img src="libro2.png" width="10px" class="libro2" alt="Libro 2">
+                        <a href="https://share.google/OL4mIh6TrTmt6NaNo" class="btn-2">Leer libro</a>
+                    </div>
+                </section>
+
+                <section class="contenido-seccion contenido-electronica" id="electronica" aria-hidden="true">
+                    <h2>LIBROS DE ELECTRÓNICA</h2>
+                    <div class="fisica-item">
+                        <img src="libro1.png" class="libro1" alt="Libro de electrónica">
+                        <p>Recursos y guías sobre circuitos, componentes y sistemas electrónicos.</p>
+                    </div>
+                    <div class="fisica-item">
+                        <img src="libro2.png" class="libro2" alt="Libro de electrónica">
+                        <p>Libros recomendados para entender la electrónica básica y aplicada.</p>
+                    </div>
+                </section>
+
+                <section class="contenido-seccion contenido-estadistica" id="estadistica" aria-hidden="true">
+                    <h2>LIBROS DE ESTADÍSTICA</h2>
+                    <div class="fisica-item">
+                        <h2>ESTADÍSTICA PARA TODOS - Dra. Diana M. Kelmansky</h2>
+                        <img src="libro3.png" class="libro1" alt="Libro de estadística">
+                        <a href="https://bnm.me.gov.ar/giga1/documentos/EL001858.pdf" class="btn-1">Leer libro</a>
+                    </div>
+                    <div class="fisica-item">
+                        <img src="libro2.png" class="libro2" alt="Libro de estadística">
+                        <p>Ejercicios y ejemplos prácticos para tus estudios de estadística.</p>
+                    </div>
+                </section>
+
+                <section class="contenido-seccion contenido-repaso" id="repaso" aria-hidden="true">
+                    <h2>MATERIAL PARA REPASO</h2>
+                    <div class="fisica-item">
+                        <img src="libro1.png" class="libro1" alt="Libro de repaso">
+                        <p>Resúmenes y guías rápidas para reforzar conceptos clave.</p>
+                    </div>
+                    <div class="fisica-item">
+                        <img src="libro2.png" class="libro2" alt="Libro de repaso">
+                        <p>Apuntes para repasar antes de los exámenes.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script>
+            const menuItems = document.querySelectorAll('.menu-item');
+            const contentSections = document.querySelectorAll('.contenido-seccion');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.dataset.section;
+
+                    menuItems.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+
+                    contentSections.forEach(section => {
+                        const isTarget = section.id === targetId;
+                        section.classList.toggle('active', isTarget);
+                        section.setAttribute('aria-hidden', !isTarget);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

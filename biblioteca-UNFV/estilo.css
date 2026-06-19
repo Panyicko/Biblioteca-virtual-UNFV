@@ -34,3 +34,225 @@ body{
      padding:20px ;
   
 }
+.menu-item {
+    color: #fff;
+}
+
+.menu-item.active {
+    background: #5b3931;
+    border-radius: 8px;
+}
+
+.contenido-seccion {
+    display: none;
+    padding: 20px;
+    background: #f5f0eb;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+.contenido-seccion.active {
+    display: block;
+}
+
+.fisica-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.fisica-item h2,
+.contenido-electronica h2,
+.contenido-estadistica h2,
+.contenido-repaso h2 {
+    margin-bottom: 16px;
+    color: #2c1713;
+}
+
+.contenido-electronica img,
+.contenido-estadistica img,
+.contenido-repaso img,
+.fisica-item img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    border: 4px solid #fff;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    background: #fff;
+}
+
+.contenido-tipos h2 {
+    font-size: 1.5rem;
+    color: #2c1713;
+    margin-bottom: 16px;
+}
+
+.btn-1,
+.btn-2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #5e3008;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.fisica-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.fisica-item h2 {
+    margin-bottom: 16px;
+    color: #2c1713;
+}
+
+.fisica-item img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    border-radius: 18px;
+    border: 4px solid #fff;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    background: #fff;
+}
+
+.cabeza-imagen {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.cabeza-imagen img {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.cabeza-imagen img:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.page-row {
+    display: flex;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+    align-items: stretch;
+    background: #f2f2f2;
+}
+
+.intro-panel,
+.tipos-panel {
+    border-radius: 24px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.intro-panel {
+    flex: 1 1 320px;
+    min-width: 300px;
+    background: linear-gradient(180deg, rgba(44, 23, 19, 0.85), rgba(44, 23, 19, 0.85)), url("introduccionunfv.png") center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.intro-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.intro-box {
+    position: relative;
+    z-index: 1;
+}
+
+.intro-panel h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.intro-panel p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.tipos-panel {
+    flex: 2 1 620px;
+    min-width: 360px;
+    background: #ffffff;
+    padding: 24px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px;
+    background: #2c1713;
+    border-radius: 18px;
+    margin-bottom: 24px;
+}
+
+.menu li {
+    display: block;
+}
+
+.menu li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 12px;
+}
+
+.contenido-seccion {
+    display: none;
+    padding: 20px;
+    background: #f5f0eb;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.contenido-seccion.active {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .page-row {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .tipos-panel,
+    .intro-panel {
+        min-width: auto;
+    }
+}
